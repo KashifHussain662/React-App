@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import Home from '../home';
+import SignIn from '../sign-in';
 import {Images} from '../../theme';
 
 // create a component
@@ -45,7 +45,7 @@ const Wellcome = ({navigation}) => {
               {`Please first you Registeration \nPlease first you Registeration \nPlease first you Registeration \nPlease first you Registeration \n`}
             </Text>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Home')}
+              onPress={() => navigation.navigate('SignIn')}
               style={styles.btn}>
               <Text
                 style={{

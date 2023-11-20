@@ -1,4 +1,5 @@
 import Wellcome from './wellcome';
-import Home from './home';
+import SignIn from './Auth/sign-in';
+import CreateAccount from './Auth/create-account';
 
-export {Wellcome, Home};
+export {Wellcome, SignIn, CreateAccount};
