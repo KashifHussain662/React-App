@@ -8,52 +8,58 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 import {Images} from '../../../theme';
 import CreateAccount from '../create';
+import images from '../../../theme/images';
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <Image source={Images.icPepsiLogo} style={styles.logo} />
-      </View>
-      <View style={styles.form}>
-        <Text style={styles.txt}>sign-in</Text>
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.TextInput}
-            placeholder="Email."
-            placeholderTextColor="#003f5c"
-            onChangeText={email => setEmail(email)}
-          />
+    <SafeAreaView>
+      <ImageBackground
+        source={images.icBgPicture}
+        style={{height: '100%', width: '100%'}}>
+        <View style={styles.container}>
+          <Image source={Images.icPepsiLogo} style={styles.logo} />
         </View>
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.TextInput}
-            placeholder="Password."
-            placeholderTextColor="#003f5c"
-            secureTextEntry={true}
-            onChangeText={password => setPassword(password)}
-          />
-        </View>
-        <TouchableOpacity>
-          <Text style={styles.forgot_button}>Forgot Password?</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText}>LOGIN</Text>
-        </TouchableOpacity>
-        <Text style={styles.txt1}>
-          don't have a account?
-          <Text
-            style={styles.txt2}
-            onPress={() => navigation.navigate('CreateAccount')}>
-            SignUp
+        <View style={styles.form}>
+          <Text style={styles.txt}>sign-in</Text>
+          <View style={styles.inputView}>
+            <TextInput
+              style={styles.TextInput}
+              placeholder="Email."
+              placeholderTextColor="#003f5c"
+              onChangeText={email => setEmail(email)}
+            />
+          </View>
+          <View style={styles.inputView}>
+            <TextInput
+              style={styles.TextInput}
+              placeholder="Password."
+              placeholderTextColor="#003f5c"
+              secureTextEntry={true}
+              onChangeText={password => setPassword(password)}
+            />
+          </View>
+          <TouchableOpacity>
+            <Text style={styles.forgot_button}>Forgot Password?</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.loginBtn}>
+            <Text style={styles.loginText}>LOGIN</Text>
+          </TouchableOpacity>
+          <Text style={styles.txt1}>
+            don't have a account?
+            <Text
+              style={styles.txt2}
+              onPress={() => navigation.navigate('CreateAccount')}>
+              SignUp
+            </Text>
           </Text>
-        </Text>
-      </View>
+        </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -67,13 +73,13 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 200,
-    height: 300,
+    height: 270,
   },
   form: {
     alignItems: 'center',
   },
   txt: {
-    color: 'black',
+    color: 'white',
     marginBottom: 20,
     fontSize: 20,
     fontWeight: '900',
@@ -81,8 +87,8 @@ const styles = StyleSheet.create({
   inputView: {
     backgroundColor: 'rgb(120, 120, 120)',
     borderRadius: 10,
-    width: '70%',
-    height: 55,
+    width: '80%',
+    height: 60,
     marginBottom: 20,
     alignItems: 'center',
   },
@@ -91,13 +97,13 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     marginLeft: 0,
-    width: 300,
+    width: 350,
     color: 'white',
   },
   forgot_button: {
     height: 30,
     marginBottom: 30,
-    color: 'black',
+    color: 'white',
   },
   loginBtn: {
     width: 80,
@@ -109,7 +115,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF1493',
   },
   txt1: {
-    color: 'black',
+    color: 'white',
     marginBottom: 50,
   },
   txt2: {

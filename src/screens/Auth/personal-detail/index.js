@@ -1,3 +1,4 @@
+//import liraries
 import React, {Component} from 'react';
 import {
   View,
@@ -5,13 +6,14 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  Image,
   SafeAreaView,
   ImageBackground,
+  Image,
 } from 'react-native';
 import {Images} from '../../../theme';
 
-const CreateAccount = ({navigation}) => {
+// create a component
+const PersonalDetails = ({navigation}) => {
   return (
     <SafeAreaView>
       <ImageBackground source={Images.icBgPicture} style={{height: '100%'}}>
@@ -20,38 +22,32 @@ const CreateAccount = ({navigation}) => {
             source={Images.icWine}
             style={{width: 350, height: 100, marginBottom: 40}}
           />
+          <View style={styles.form}>
+            <Text style={styles.txt}>Add Your Personal Detail</Text>
 
-          <View style={{marginTop: 30, alignItems: 'center'}}>
-            <Text style={styles.txt}>CreateAccount</Text>
-
-            {/* phone number field */}
             <View>
-              <Text style={styles.txt1}>Phone Number</Text>
+              <Text>Full Name</Text>
               <TextInput
                 style={styles.TextInput}
-                placeholder="Enter Your Phone Number"
+                placeholder="Enter Your Full Name"
               />
             </View>
-            {/* password field */}
             <View>
-              <Text style={styles.txt1}>Password</Text>
+              <Text>Age</Text>
               <TextInput
                 style={styles.TextInput}
-                placeholder="Enter Your Password"
+                placeholder="Enter Your Age"
               />
             </View>
-            {/* conform Password */}
             <View>
-              <Text style={styles.txt1}>Confrom Password</Text>
-              <TextInput
-                style={styles.TextInput}
-                placeholder="ReEnter Your Password"
-              />
+              <Text>Token Number</Text>
+              <TextInput style={styles.TextInput} placeholder="Enter Number" />
             </View>
           </View>
           <TouchableOpacity
             style={styles.btn}
-            onPress={() => navigation.navigate('Personal-Details')}>
+            // onPress={() => navigation.navigate('Personal-Details')}
+          >
             <Text style={styles.txt2}>Next</Text>
           </TouchableOpacity>
           <Text style={styles.txt3}>
@@ -68,8 +64,10 @@ const CreateAccount = ({navigation}) => {
   );
 };
 
+// define your styles
 const styles = StyleSheet.create({
   container: {
+    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 50,
@@ -80,13 +78,14 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom: 50,
   },
-  txt1: {
-    fontSize: 15,
-    color: 'white',
+  form: {
+    marginTop: 30,
+    alignItems: 'center',
   },
+
   TextInput: {
-    borderColor: 'silver',
-    borderWidth: 2,
+    borderColor: 'white',
+    borderWidth: 1,
     padding: 15,
     marginTop: 15,
     width: 350,
@@ -110,6 +109,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   txt3: {
+    // color: 'black',
     color: 'white',
   },
   txt4: {
@@ -117,4 +117,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CreateAccount;
+//make this component available to the app
+export default PersonalDetails;
