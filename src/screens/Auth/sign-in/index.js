@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Images} from '../../../theme';
-import CreateAccount from '../create-account';
+import CreateAccount from '../create';
 
 const SignIn = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -45,10 +45,13 @@ const SignIn = ({navigation}) => {
         <TouchableOpacity style={styles.loginBtn}>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
-        <Text
-          style={styles.txt1}
-          onPress={() => navigation.navigate('CreateAccount')}>
-          create a account
+        <Text style={styles.txt1}>
+          don't have a account?
+          <Text
+            style={styles.txt2}
+            onPress={() => navigation.navigate('CreateAccount')}>
+            SignUp
+          </Text>
         </Text>
       </View>
     </SafeAreaView>
@@ -76,10 +79,10 @@ const styles = StyleSheet.create({
     fontWeight: '900',
   },
   inputView: {
-    backgroundColor: '#FFC0CB',
+    backgroundColor: 'rgb(120, 120, 120)',
     borderRadius: 10,
     width: '70%',
-    height: 45,
+    height: 55,
     marginBottom: 20,
     alignItems: 'center',
   },
@@ -89,6 +92,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginLeft: 0,
     width: 300,
+    color: 'white',
   },
   forgot_button: {
     height: 30,
@@ -107,6 +111,9 @@ const styles = StyleSheet.create({
   txt1: {
     color: 'black',
     marginBottom: 50,
+  },
+  txt2: {
+    color: 'red',
   },
 });
 

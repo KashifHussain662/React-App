@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import SignIn from '../sign-in';
 import {Images} from '../../theme';
 
 // create a component
