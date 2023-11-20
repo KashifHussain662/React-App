@@ -21,7 +21,14 @@ const CreateAccount = ({navigation}) => {
             style={{width: 350, height: 100, marginBottom: 40}}
           />
 
-          <View style={{marginTop: 30, alignItems: 'center'}}>
+          <View
+            style={{
+              marginTop: 30,
+              alignItems: 'center',
+              backgroundColor: '#000000',
+              padding: 25,
+              borderRadius: 15,
+            }}>
             <Text style={styles.txt}>CreateAccount</Text>
 
             {/* phone number field */}

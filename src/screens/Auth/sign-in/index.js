@@ -23,41 +23,43 @@ const SignIn = ({navigation}) => {
         source={images.icBgPicture}
         style={{height: '100%', width: '100%'}}>
         <View style={styles.container}>
-          <Image source={Images.icPepsiLogo} style={styles.logo} />
-        </View>
-        <View style={styles.form}>
-          <Text style={styles.txt}>sign-in</Text>
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.TextInput}
-              placeholder="Email."
-              placeholderTextColor="#003f5c"
-              onChangeText={email => setEmail(email)}
-            />
+          <View>
+            <Image source={Images.icPepsiLogo} style={styles.logo} />
           </View>
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.TextInput}
-              placeholder="Password."
-              placeholderTextColor="#003f5c"
-              secureTextEntry={true}
-              onChangeText={password => setPassword(password)}
-            />
-          </View>
-          <TouchableOpacity>
-            <Text style={styles.forgot_button}>Forgot Password?</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.loginBtn}>
-            <Text style={styles.loginText}>LOGIN</Text>
-          </TouchableOpacity>
-          <Text style={styles.txt1}>
-            don't have a account?
-            <Text
-              style={styles.txt2}
-              onPress={() => navigation.navigate('CreateAccount')}>
-              SignUp
+          <View style={styles.form}>
+            <Text style={styles.txt}>sign-in</Text>
+            <View style={styles.inputView}>
+              <TextInput
+                style={styles.TextInput}
+                placeholder="Email."
+                placeholderTextColor="#003f5c"
+                onChangeText={email => setEmail(email)}
+              />
+            </View>
+            <View style={styles.inputView}>
+              <TextInput
+                style={styles.TextInput}
+                placeholder="Password."
+                placeholderTextColor="#003f5c"
+                secureTextEntry={true}
+                onChangeText={password => setPassword(password)}
+              />
+            </View>
+            <TouchableOpacity>
+              <Text style={styles.forgot_button}>Forgot Password?</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.loginBtn}>
+              <Text style={styles.loginText}>LOGIN</Text>
+            </TouchableOpacity>
+            <Text style={styles.txt1}>
+              don't have a account?
+              <Text
+                style={styles.txt2}
+                onPress={() => navigation.navigate('CreateAccount')}>
+                SignUp
+              </Text>
             </Text>
-          </Text>
+          </View>
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -67,7 +69,7 @@ const SignIn = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
     alignItems: 'center',
     // backgroundColor: 'yellow',
   },
@@ -77,19 +79,20 @@ const styles = StyleSheet.create({
   },
   form: {
     alignItems: 'center',
+    marginTop: 100,
   },
   txt: {
     color: 'white',
-    marginBottom: 20,
-    fontSize: 20,
     fontWeight: '900',
+    fontSize: 30,
+    marginBottom: 50,
   },
   inputView: {
     backgroundColor: 'rgb(120, 120, 120)',
     borderRadius: 10,
     width: '80%',
     height: 60,
-    marginBottom: 20,
+    marginBottom: 25,
     alignItems: 'center',
   },
   TextInput: {
