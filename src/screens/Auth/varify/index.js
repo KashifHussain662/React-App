@@ -13,7 +13,7 @@ import {
 import {Images} from '../../../theme';
 
 // create a component
-const Password = ({navigation}) => {
+const Verify = ({navigation}) => {
   return (
     <SafeAreaView>
       <ImageBackground source={Images.icBgPicture} style={{height: '100%'}}>
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Password;
+export default Verify;

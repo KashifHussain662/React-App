@@ -1,12 +1,17 @@
 import * as React from 'react';
-import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {PersonalDetails, SignIn, Wellcome} from '../screens';
-import CreateAccount from '../screens/Auth/create';
-import Password from '../screens/Auth/password';
-import Varify from '../screens/Auth/varify';
-import ForgotPassword from '../screens/Auth/forgot-Password';
+import {
+  Wellcome,
+  PersonalDetails,
+  SignIn,
+  CreateAccount,
+  Password,
+  Verify,
+  ForgotPassword,
+  Home,
+  AccountCreated,
+} from '../screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,12 +52,22 @@ function App() {
         />
         <Stack.Screen
           name="Varify"
-          component={Varify}
+          component={Verify}
           options={{headerShown: false}}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="AcoountCreated"
+          component={AccountCreated}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

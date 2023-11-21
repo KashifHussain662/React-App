@@ -48,7 +48,11 @@ const PersonalDetails = ({navigation}) => {
             style={styles.btn}
             // onPress={() => navigation.navigate('Personal-Details')}
           >
-            <Text style={styles.txt2}>Next</Text>
+            <Text
+              style={styles.txt2}
+              onPress={() => navigation.navigate('AcoountCreated')}>
+              Create Account
+            </Text>
           </TouchableOpacity>
           <Text style={styles.txt3}>
             you have a already account?
