@@ -15,4 +15,11 @@ export default {
   icHome1: require('../../assets/images/ion_home.png'),
   IcProduct: require('../../assets/images/simple-icons_pepsi.png'),
   icSetting: require('../../assets/images/icon-park-solid_setting.png'),
+  icP: require('../../assets/images/prdct.png'),
+  icA: require('../../assets/images/a1.png'),
+  icB: require('../../assets/images/a2.png'),
+  icC: require('../../assets/images/a3.png'),
+  icD: require('../../assets/images/a4.png'),
+  icE: require('../../assets/images/a5.png'),
+  icF: require('../../assets/images/a6.png'),
 };

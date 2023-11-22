@@ -18,32 +18,14 @@ import AutoScroll from '@homielab/react-native-auto-scroll';
 const Home = ({navigation}) => {
   return (
     <SafeAreaView>
-      <ImageBackground
-        source={Images.icHomeBg}
-        style={{
-          width: '100%',
-          height: '100%',
-          alignItems: 'center',
-        }}>
+      <ImageBackground source={Images.icHomeBg} style={styles.bg_img}>
         <View style={styles.TextInput}>
-          <TextInput placeholder="search here" style={styles.InputView} />
+          <TextInput placeholder="Search here" style={styles.InputView} />
           <Image source={Images.icSearch} />
         </View>
-        <Text
-          style={{
-            fontWeight: '900',
-            marginTop: 30,
-            fontSize: 25,
-          }}>
-          New Addition
-        </Text>
+        <Text style={styles.add}>New Addition</Text>
         <AutoScroll style={{flexDirection: 'row'}}>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'flex-start',
-              margin: 30,
-            }}>
+          <View style={styles.banner}>
             <View>
               <Image
                 // delay={0}
@@ -78,62 +60,50 @@ const Home = ({navigation}) => {
             </View>
           </View>
         </AutoScroll>
-        <View style={{height: 250, justifyContent: 'space-evenly'}}>
-          <View
-            style={{
-              marginHorizontal: 20,
-              backgroundColor: 'black',
-              padding: 10,
-              borderRadius: 10,
-            }}>
-            <Text
-              style={{
-                color: 'white',
-                fontSize: 20,
-                fontWeight: '900',
-              }}>
-              Nitro Pepsi
-            </Text>
-            <Text
-              style={{
-                color: 'white',
-                fontSize: 15,
-                fontWeight: '700',
-                marginTop: 7,
-              }}>
+        <ScrollView>
+          <View>
+            <View style={styles.container}>
+              <Text style={styles.ttl}>Nitro Pepsi</Text>
+              <Text style={styles.p}>
+                Nitro Pepsi is a cola soft drink produced by PepsiCo. It is a
+                nitrogen-infused version of Pepsi. The addition of nitrogen gas,
+                instead of the usual carbon dioxide, creates a smooth texture.
+              </Text>
+            </View>
+            <View style={styles.container}>
+              <Text style={styles.ttl}>Nitro Pepsi</Text>
+              <Text style={styles.p}>
+                Nitro Pepsi is a cola soft drink produced by PepsiCo. It is a
+                nitrogen-infused version of Pepsi. The addition of nitrogen gas,
+                instead of the usual carbon dioxide, creates a smooth texture.
+              </Text>
+            </View>
+          </View>
+          <View style={styles.container}>
+            <Text style={styles.ttl}>Nitro Pepsi</Text>
+            <Text style={styles.p}>
               Nitro Pepsi is a cola soft drink produced by PepsiCo. It is a
               nitrogen-infused version of Pepsi. The addition of nitrogen gas,
               instead of the usual carbon dioxide, creates a smooth texture.
             </Text>
           </View>
-          <View
-            style={{
-              marginHorizontal: 20,
-              backgroundColor: 'black',
-              padding: 10,
-              borderRadius: 10,
-            }}>
-            <Text
-              style={{
-                color: 'white',
-                fontSize: 20,
-                fontWeight: '900',
-              }}>
-              Nitro Pepsi
-            </Text>
-            <Text
-              style={{
-                color: 'white',
-                fontSize: 15,
-                fontWeight: '700',
-                marginTop: 7,
-              }}>
+          <View style={styles.container}>
+            <Text style={styles.ttl}>Nitro Pepsi</Text>
+            <Text style={styles.p}>
               Nitro Pepsi is a cola soft drink produced by PepsiCo. It is a
               nitrogen-infused version of Pepsi. The addition of nitrogen gas,
               instead of the usual carbon dioxide, creates a smooth texture.
             </Text>
           </View>
-        </View>
+          <View style={styles.container}>
+            <Text style={styles.ttl}>Nitro Pepsi</Text>
+            <Text style={styles.p}>
+              Nitro Pepsi is a cola soft drink produced by PepsiCo. It is a
+              nitrogen-infused version of Pepsi. The addition of nitrogen gas,
+              instead of the usual carbon dioxide, creates a smooth texture.
+            </Text>
+          </View>
+        </ScrollView>
       </ImageBackground>
     </SafeAreaView>
   );
@@ -141,6 +111,11 @@ const Home = ({navigation}) => {
 
 // define your styles
 const styles = StyleSheet.create({
+  bg_img: {
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+  },
   TextInput: {
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -151,9 +126,37 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginTop: 50,
     padding: 5,
-    backgroundColor: 'silver',
+    backgroundColor: '#5d5369',
     fontSize: 15,
     color: 'balck',
+  },
+  add: {
+    fontWeight: '900',
+    marginTop: 30,
+    fontSize: 25,
+  },
+  banner: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    margin: 30,
+  },
+  container: {
+    marginHorizontal: 20,
+    backgroundColor: '#3b394f',
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 10,
+  },
+  ttl: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: '900',
+  },
+  p: {
+    color: 'white',
+    fontSize: 15,
+    fontWeight: '700',
+    marginTop: 7,
   },
 });
 
