@@ -12,6 +12,7 @@ import {
   Home,
   AccountCreated,
 } from '../screens';
+import Tabs from './tabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -60,14 +61,15 @@ function App() {
           component={ForgotPassword}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{headerShown: false}}
-        />
+
         <Stack.Screen
           name="AcoountCreated"
           component={AccountCreated}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Tabs"
+          component={Tabs}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

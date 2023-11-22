@@ -7,6 +7,8 @@ import {ForgotPassword} from './Auth';
 import {Verify} from './Auth';
 import {AccountCreated} from './Auth';
 import Home from './home';
+import Product from './product';
+import Setting from './setting';
 
 export {
   Wellcome,
@@ -18,4 +20,6 @@ export {
   Verify,
   Home,
   AccountCreated,
+  Product,
+  Setting,
 };

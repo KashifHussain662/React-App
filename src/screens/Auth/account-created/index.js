@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Images} from '../../../theme';
+import Tabs from '../../../routes/tabs';
 
 const AccountCreated = ({navigation}) => {
   return (
@@ -16,7 +17,7 @@ const AccountCreated = ({navigation}) => {
       <View style={styles.container}>
         <Text style={styles.txt1}>Congratulation!</Text>
         <TouchableOpacity style={styles.btn}>
-          <Text onPress={() => navigation.navigate('Home')} style={styles.txt}>
+          <Text onPress={() => navigation.navigate('Tabs')} style={styles.txt}>
             Account Created
           </Text>
         </TouchableOpacity>
