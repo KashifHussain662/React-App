@@ -10,4 +10,9 @@ export default {
   icBanner1: require('../../assets/images/Banner1.png'),
   icBanner2: require('../../assets/images/Banner2.png'),
   icBanner3: require('../../assets/images/Banner3.png'),
+  icSearch: require('../../assets/images/search.png'),
+  icUser: require('../../assets/images/user.png'),
+  icHome1: require('../../assets/images/ion_home.png'),
+  IcProduct: require('../../assets/images/simple-icons_pepsi.png'),
+  icSetting: require('../../assets/images/icon-park-solid_setting.png'),
 };

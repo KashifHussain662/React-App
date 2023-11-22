@@ -15,7 +15,7 @@ import {Images} from '../../theme';
 import AutoScroll from '@homielab/react-native-auto-scroll';
 
 // create a component
-const Wellcome = ({navigation}) => {
+const Home = ({navigation}) => {
   return (
     <SafeAreaView>
       <ImageBackground
@@ -25,11 +25,19 @@ const Wellcome = ({navigation}) => {
           height: '100%',
           alignItems: 'center',
         }}>
-        <View style={{width: '80%'}}>
-          <TextInput placeholder="search here" style={styles.TextInput} />
+        <View style={styles.TextInput}>
+          <TextInput placeholder="search here" style={styles.InputView} />
+          <Image source={Images.icSearch} />
         </View>
-
-        <AutoScroll>
+        <Text
+          style={{
+            fontWeight: '900',
+            marginTop: 30,
+            fontSize: 25,
+          }}>
+          New Addition
+        </Text>
+        <AutoScroll style={{flexDirection: 'row'}}>
           <View
             style={{
               flexDirection: 'row',
@@ -70,6 +78,62 @@ const Wellcome = ({navigation}) => {
             </View>
           </View>
         </AutoScroll>
+        <View style={{height: 250, justifyContent: 'space-evenly'}}>
+          <View
+            style={{
+              marginHorizontal: 20,
+              backgroundColor: 'black',
+              padding: 10,
+              borderRadius: 10,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 20,
+                fontWeight: '900',
+              }}>
+              Nitro Pepsi
+            </Text>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 15,
+                fontWeight: '700',
+                marginTop: 7,
+              }}>
+              Nitro Pepsi is a cola soft drink produced by PepsiCo. It is a
+              nitrogen-infused version of Pepsi. The addition of nitrogen gas,
+              instead of the usual carbon dioxide, creates a smooth texture.
+            </Text>
+          </View>
+          <View
+            style={{
+              marginHorizontal: 20,
+              backgroundColor: 'black',
+              padding: 10,
+              borderRadius: 10,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 20,
+                fontWeight: '900',
+              }}>
+              Nitro Pepsi
+            </Text>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 15,
+                fontWeight: '700',
+                marginTop: 7,
+              }}>
+              Nitro Pepsi is a cola soft drink produced by PepsiCo. It is a
+              nitrogen-infused version of Pepsi. The addition of nitrogen gas,
+              instead of the usual carbon dioxide, creates a smooth texture.
+            </Text>
+          </View>
+        </View>
       </ImageBackground>
     </SafeAreaView>
   );
@@ -78,16 +142,20 @@ const Wellcome = ({navigation}) => {
 // define your styles
 const styles = StyleSheet.create({
   TextInput: {
-    // width: '80%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    width: '90%',
     borderColor: 'black',
     borderWidth: 1,
-    borderRadius: 10,
-    marginTop: 100,
-    padding: 13,
+    borderRadius: 12,
+    marginTop: 50,
+    padding: 5,
     backgroundColor: 'silver',
-    color: 'black',
+    fontSize: 15,
+    color: 'balck',
   },
 });
 
 //make this component available to the app
-export default Wellcome;
+export default Home;
