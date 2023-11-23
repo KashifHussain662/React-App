@@ -10,6 +10,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import {Images} from '../../theme';
+import styles from './style';
 
 // create a component
 const Wellcome = ({navigation}) => {
@@ -69,20 +70,4 @@ const Wellcome = ({navigation}) => {
   );
 };
 
-// define your styles
-const styles = StyleSheet.create({
-  Container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  btn: {
-    paddingHorizontal: 70,
-    backgroundColor: 'yellow',
-    width: '80%',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-});
-
-//make this component available to the app
 export default Wellcome;

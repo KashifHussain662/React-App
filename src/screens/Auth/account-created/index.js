@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import {Images} from '../../../theme';
 import Tabs from '../../../routes/tabs';
+import styles from './style';
 
 const AccountCreated = ({navigation}) => {
   return (
@@ -25,30 +26,5 @@ const AccountCreated = ({navigation}) => {
     </ImageBackground>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  txt: {
-    color: 'black',
-    fontWeight: '900',
-  },
-  txt1: {
-    color: 'white',
-    marginBottom: 50,
-    fontSize: 50,
-    fontWeight: '900',
-  },
-  btn: {
-    height: 40,
-    paddingHorizontal: 80,
-    backgroundColor: 'yellow',
-    borderRadius: 15,
-    justifyContent: 'center',
-  },
-});
 
 export default AccountCreated;
