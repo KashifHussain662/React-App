@@ -22,4 +22,9 @@ export default {
   icD: require('../../assets/images/a4.png'),
   icE: require('../../assets/images/a5.png'),
   icF: require('../../assets/images/a6.png'),
+  icFlt: require('../../assets/images/flt.png'),
+  icFlt1: require('../../assets/images/flt1.png'),
+  icFlt2: require('../../assets/images/flt2.png'),
+  icFlt3: require('../../assets/images/flt3.png'),
+  icFlt4: require('../../assets/images/flt4.png'),
 };

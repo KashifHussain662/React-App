@@ -48,4 +48,23 @@ export default StyleSheet.create({
     fontWeight: '700',
     marginTop: 7,
   },
+  flt: {
+    backgroundColor: 'rgba(7, 5, 5, 0.71)',
+    padding: 10,
+    margin: 5,
+    borderRadius: 10,
+    flexDirection: 'row',
+    gap: 15,
+  },
+  txtContainer: {
+    justifyContent: 'center',
+  },
+  txt1: {
+    fontWeight: '900',
+    fontSize: 15,
+  },
+  txt2: {
+    fontWeight: '600',
+    fontSize: 15,
+  },
 });

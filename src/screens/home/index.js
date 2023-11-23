@@ -9,10 +9,12 @@ import {
   SafeAreaView,
   TextInput,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import styles from './style';
 import {Images} from '../../theme';
 import AutoScroll from '@homielab/react-native-auto-scroll';
+import {pepsi} from './data';
 
 const Home = ({navigation}) => {
   return (
@@ -59,6 +61,18 @@ const Home = ({navigation}) => {
             </View>
           </View>
         </AutoScroll>
+        <FlatList
+          data={pepsi}
+          renderItem={({item}) => (
+            <View style={styles.flt}>
+              <View>{item.img}</View>
+              <View style={styles.txtContainer}>
+                <Text style={styles.txt1}>{item.title}</Text>
+                <Text style={styles.txt2}>{item.Dscrpt}</Text>
+              </View>
+            </View>
+          )}
+        />
       </ImageBackground>
     </SafeAreaView>
   );
