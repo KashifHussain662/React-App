@@ -14,7 +14,7 @@ const Setting = () => {
           <View style={styles.flatList}>
             <View style={styles.flatListContainer}>
               <Text style={styles.flatListText}>{item.title}</Text>
-              <SwitchButton />
+              <Text>{item.btn}</Text>
             </View>
             <Text style={styles.flatListText1}>{item.Dscrpt}</Text>
           </View>
