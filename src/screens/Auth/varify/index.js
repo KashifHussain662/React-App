@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import {Images} from '../../../theme';
 import styles from './style';
+import {OTPInput} from '../../../components';
 
 // create a component
 const Verify = ({navigation}) => {
@@ -20,10 +21,7 @@ const Verify = ({navigation}) => {
       <ImageBackground source={Images.icBgPicture} style={{height: '100%'}}>
         <View style={styles.container}>
           <View style={{flexDirection: 'row', padding: 20}}>
-            <TextInput style={styles.Input} />
-            <TextInput style={styles.Input} />
-            <TextInput style={styles.Input} />
-            <TextInput style={styles.Input} />
+            <OTPInput />
           </View>
           <Image source={Images.icVerify} />
           <TouchableOpacity

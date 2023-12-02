@@ -7,19 +7,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginTop: 50,
   },
-  Input: {
-    width: 60,
-    height: 60,
-    borderWidth: 2,
-    borderColor: 'black',
-    margin: 15,
-    borderRadius: 15,
-    backgroundColor: 'white',
-    fontSize: 25,
-    color: 'black',
-    fontWeight: '900',
-    textAlign: 'center',
-  },
+
   btn: {
     width: 200,
     backgroundColor: 'red',

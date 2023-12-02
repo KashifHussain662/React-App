@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {Images} from '../../../theme';
 import styles from './style';
+import {OTPInput} from '../../../components';
 
 // create a component
 const Password = ({navigation}) => {
@@ -21,12 +22,7 @@ const Password = ({navigation}) => {
           <Text style={{fontSize: 23, fontWeight: '900', color: 'white'}}>
             Enter OTP Code
           </Text>
-          <View style={{flexDirection: 'row', padding: 20}}>
-            <TextInput style={styles.Input} />
-            <TextInput style={styles.Input} />
-            <TextInput style={styles.Input} />
-            <TextInput style={styles.Input} />
-          </View>
+          <OTPInput />
           <TouchableOpacity
             style={styles.btn}
             onPress={() => navigation.navigate('Varify')}>
